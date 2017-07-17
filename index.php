@@ -48,9 +48,9 @@ $app->get(
 );
 
 $app->get(
-        "/api/cabs", function() {
+        "/api/summarylist", function() {
     $obj = new UserController();
-    $res = $obj->getCab($_GET);
+    $res = $obj->getOrderSummary();
     print_r(stripslashes(json_encode($res)));
 }
 );
